@@ -3,10 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adil Raza's Portfolio</title>
+    <style>
+        /* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #ccc;
+    text-align: center;
+}
+
+/* Navbar Styles */
+#nav-menu {
+    background-color: #333;
+}
+
+#nav-menu ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+#nav-menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ccc;
+}
+
+/* Sections Styles */
+.section {
+    padding: 40px 0;
+}
+
+/* Home Section Styles */
+#home {
+    background-color: #333;
+}
+
+.home-img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* About Section Styles */
+#about {
+    background-color: #444;
+}
+
+/* Skills Section Styles */
+#skills {
+    background-color: #333;
+}
+
+.skills-card {
+    margin: 20px;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.skills-card-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Projects Section Styles */
+#projects {
+    background-color: #444;
+}
+
+.project-card {
+    margin: 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.project-title {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.project-description {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.project-tech-stack {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.project-github-link,
+.project-deployed-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #333;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact li {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+/* Resume Section Styles */
+#resume {
+    background-color: #444;
+}
+
+#resume-button-1,
+#resume-button-2 {
+    background-color: #333;
+    color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* GitHub Stats Styles */
+.react-activity-calendar,
+#github-streak-stats,
+#github-top-langs,
+#github-stats-card {
+    max-width: 100%;
+    margin: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+    }
+    
+    .project-title {
+        font-size: 20px;
+    }
+}
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <h1>Hi I am a full stack web developer</h1>
-    
+    <!-- Navbar -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#home" class="nav-link home">Home</a></li>
+            <li><a href="#about" class="nav-link about">About</a></li>
+            <li><a href="#skills" class="nav-link skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link projects">Projects</a></li>
+            <li><a href="#contact" class="nav-link contact">Contact</a></li>
+            <li><a href="#resume" class="nav-link resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home section -->
+    <section id="home">
+        <img src="your-image.jpg" alt="Adil Raza" class="home-img">
+        <h1>Adil Raza</h1>
+        <p class="user-detail-intro">Professional Web Developer</p>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="about section">
+        <h2>About Me</h2>
+        <p>My name is Adil Raza. I am a web developer with a passion for creating responsive and user-friendly websites.</p>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-card">
+            <img src="skill1.jpg" alt="Skill 1" class="skills-card-img">
+            <h3 class="skills-card-name">Skill 1</h3>
+        </div>
+        <div class="skills-card">
+            <img src="skill2.jpg" alt="Skill 2" class="skills-card-img">
+            <h3 class="skills-card-name">Skill 2</h3>
+        </div>
+        <!-- Add more skills cards as needed -->
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <img src="project1.jpg" alt="Project 1">
+            <h3 class="project-title">Project 1</h3>
+            <p class="project-description">Description of Project 1.</p>
+            <p class="project-tech-stack">Tech Stack: HTML, CSS, JavaScript</p>
+            <a href="github-link-1" class="project-github-link">GitHub Repository</a>
+            <a href="project-link-1" class="project-deployed-link">Deployed Project</a>
+        </div>
+        <div class="project-card">
+            <img src="project2.jpg" alt="Project 2">
+            <h3 class="project-title">Project 2</h3>
+            <p class="project-description">Description of Project 2.</p>
+            <p class="project-tech-stack">Tech Stack: HTML, CSS, JavaScript</p>
+            <a href="github-link-2" class="project-github-link">GitHub Repository</a>
+            <a href="project-link-2" class="project-deployed-link">Deployed Project</a>
+        </div>
+        <!-- Add more project cards as needed -->
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to contact me:</p>
+        <ul>
+            <li id="contact-github"><a href="https://github.com/yourgithub">GitHub Profile</a></li>
+            <li id="contact-linkedin"><a href="https://linkedin.com/in/yourlinkedin">LinkedIn Profile</a></li>
+            <li id="contact-phone">Phone: +1234567890</li>
+            <li id="contact-email">Email: your@email.com</li>
+        </ul>
+    </section>
+
+    <!-- Resume section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <a href="resume.pdf" id="resume-link-1" target="_blank" rel="noopener noreferrer"><button id="resume-button-1">Download Resume</button></a>
+    </section>
+
+    <!-- GitHub stats -->
+    <div class="react-activity-calendar" id="github-streak-stats"></div>
+    <img src="https://github-readme-stats.herokuapp.com/demo/" alt="GitHub streak stats" id="github-streak-stats">
+    <img src="https://github.com/anuraghazra/github-readme-stats" alt="GitHub top languages" id="github-top-langs">
+    <img src="https://github.com/anuraghazra/github-readme-stats" alt="GitHub stats card" id="github-stats-card">
+
+    <script src="script.js"></script>
 </body>
 </html>
