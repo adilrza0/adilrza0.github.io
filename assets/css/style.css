@@ -188,8 +188,8 @@ body.active { overflow: hidden; }
 
 .w-100 {
   width: 80%;
- border-radius: 15%;
-  filter: drop-shadow(5px -2px 30px rgb(223, 203, 160));
+ border-radius: 5%;
+  filter: drop-shadow(5px -2px 30px var(--color-primary));
   /* padding: 50%; */
  }
 
@@ -489,7 +489,9 @@ main { overflow-x: hidden; }
 
 .whiteShirtimage{
   width: 100%;
-  filter: drop-shadow(0px 0px 15px #fffdf0);
+  background-color: var(--raw-seinna);
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 15px var(--raw-seinna));
 }
 
 
