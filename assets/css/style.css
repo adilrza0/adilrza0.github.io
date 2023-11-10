@@ -9,10 +9,10 @@
    */
 
   --raw-seinna: hsl(167, 68%, 52%);
-  --sizzling-sunrise: hsl(32, 95%, 54%);
+  --sizzling-sunrise: hsl(46, 95%, 54%);
   --scarlet: hsl(13, 69%, 14%);
   --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 0%, 100%);
+  --white: hsl(0, 0%, 88%);
 
   /**
    * typography
@@ -67,7 +67,7 @@ body.dark_theme {
   --bg-primary: hsl(0, 0%, 0%);
   --bg-secondary: hsl(0, 2%, 9%);
   --color-primary: hsl(0, 0%, 100%);
-  --color-secondary: hsl(0, 2%, 74%);
+  --color-secondary: hsl(0, 0%, 97%);
   --card-shadow: hsla(0, 0%, 0%, 0.4);
   --input-bg: hsl(0, 0%, 16%);
 
@@ -77,10 +77,10 @@ body.dark_theme {
 
 body.light_theme {
 
-  --bg-primary: hsl(214, 41%, 97%);
-  --bg-secondary: hsl(240, 100%, 98%);
-  --color-primary: hsl(0, 0%, 0%);
-  --color-secondary: hsl(0, 0%, 28%);
+  --bg-primary: hsl(0, 0%, 100%);
+  --bg-secondary: hsl(0, 0%, 100%);
+  --color-primary: hsl(0, 1%, 27%);
+  --color-secondary: hsl(0, 1%, 38%);
   --card-shadow: hsla(0, 0%, 0%, 0.1);
   --input-bg: hsl(0, 0%, 93%);
 
@@ -222,7 +222,7 @@ body.active { overflow: hidden; }
   color: var(--black);
 }
 
-.btn-secondary:is(:hover, :focus) { --raw-seinna: hsl(24, 74%, 64%); }
+.btn-secondary:is(:hover, :focus) { --raw-seinna: hsl(162, 64%, 79%); }
 
 .section-subtitle {
   position: relative;
