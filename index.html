@@ -1,268 +1,921 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adil Raza's Portfolio</title>
-    <style>
-        /* Reset some default styles */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio: Adil Raza</title>
 
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #ccc;
-    text-align: center;
-}
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-/* Navbar Styles */
-#nav-menu {
-    background-color: #333;
-}
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-#nav-menu ul {
-    list-style-type: none;
-    padding: 10px 0;
-}
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+    rel="stylesheet">
 
-#nav-menu ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #ccc;
-}
-
-/* Sections Styles */
-.section {
-    padding: 40px 0;
-}
-
-/* Home Section Styles */
-#home {
-    background-color: #333;
-}
-
-.home-img {
-    max-width: 100%;
-    border-radius: 50%;
-}
-
-/* About Section Styles */
-#about {
-    background-color: #444;
-}
-
-/* Skills Section Styles */
-#skills {
-    background-color: #333;
-}
-
-.skills-card {
-    margin: 20px;
-    padding: 20px;
-    background-color: #444;
-    border-radius: 5px;
-}
-
-.skills-card-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Projects Section Styles */
-#projects {
-    background-color: #444;
-}
-
-.project-card {
-    margin: 20px;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 5px;
-}
-
-.project-title {
-    font-size: 24px;
-    margin: 10px 0;
-    color: #ccc;
-}
-
-.project-description {
-    margin: 10px 0;
-    color: #ccc;
-}
-
-.project-tech-stack {
-    margin: 10px 0;
-    color: #ccc;
-}
-
-.project-github-link,
-.project-deployed-link {
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #ccc;
-}
-
-/* Contact Section Styles */
-#contact {
-    background-color: #333;
-}
-
-#contact ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#contact li {
-    margin: 10px 0;
-    color: #ccc;
-}
-
-/* Resume Section Styles */
-#resume {
-    background-color: #444;
-}
-
-#resume-button-1,
-#resume-button-2 {
-    background-color: #333;
-    color: #ccc;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 10px;
-}
-
-/* GitHub Stats Styles */
-.react-activity-calendar,
-#github-streak-stats,
-#github-top-langs,
-#github-stats-card {
-    max-width: 100%;
-    margin: 20px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    /* Adjust styles for smaller screens */
-    h1 {
-        font-size: 24px;
-    }
-    
-    h2 {
-        font-size: 20px;
-    }
-    
-    .nav-link {
-        font-size: 14px;
-    }
-    
-    .project-title {
-        font-size: 20px;
-    }
-}
-
-    </style>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
 </head>
-<body>
-    <!-- Navbar -->
-    <nav id="nav-menu">
-        <ul>
-            <li><a href="#home" class="nav-link home">Home</a></li>
-            <li><a href="#about" class="nav-link about">About</a></li>
-            <li><a href="#skills" class="nav-link skills">Skills</a></li>
-            <li><a href="#projects" class="nav-link projects">Projects</a></li>
-            <li><a href="#contact" class="nav-link contact">Contact</a></li>
-            <li><a href="#resume" class="nav-link resume">Resume</a></li>
+
+<body id="top" class="dark_theme">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header >
+    <div class="container" id="nav-menu">
+
+      <h1 class="h1 logo">
+        <a href="#"><span>Adil</span> Raza</span></a>
+      </h1>
+
+      <div class="navbar-actions">
+
+        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+          <span class="icon"></span>
+        </button>
+
+      </div>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="nav-link home">Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="nav-link about">About</a>
+          </li>
+
+          <li>
+            <a href="#skills" class="nav-link skills">Skills</a>
+          </li>
+
+          <li>
+            <a href="#projects" class="nav-link projects">Projects</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="nav-link contact">Contact</a>
+          </li>
+
+          <li>
+            <a onclick="downloadResume()" href="./assets/resume/Adil-Raza-Resume.pdf" class="nav-link resume" id="resume-button-1" download>Resume</a>
+          </li>
+
         </ul>
-    </nav>
+      </nav>
 
-    <!-- Home section -->
-    <section id="home">
-        <img src="your-image.jpg" alt="Adil Raza" class="home-img">
-        <h1>Adil Raza</h1>
-        <p class="user-detail-intro">Professional Web Developer</p>
-    </section>
+    </div>
+  </header>
 
-    <!-- About section -->
-    <section id="about" class="about section">
-        <h2>About Me</h2>
-        <p>My name is Adil Raza. I am a web developer with a passion for creating responsive and user-friendly websites.</p>
-    </section>
 
-    <!-- Skills section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-card">
-            <img src="skill1.jpg" alt="Skill 1" class="skills-card-img">
-            <h3 class="skills-card-name">Skill 1</h3>
+  <main>
+    <article class="container">
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home">
+
+        <figure class="hero-banner">
+
+          <picture>
+            <source srcset="./assets/images/blue.png" media="(min-width: 768px)">
+            <source srcset="./assets/images/blue.png" media="(min-width: 500px)">
+            <img src="./assets/images/blue.png" alt="my Main Iamge"
+              class="w-100 home-img">
+          </picture>
+
+        </figure>
+
+        <div class="hero-content">
+
+          <h2 style="font-size: 35px;" class="h2 hero-title" id="user-detail-name">Hi, My name is Adil Raza</h2>
+          <h3 style="font-size: 35px;" class="h3 hero-title">Full Stack Web Developer</h3>
+
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+
         </div>
-        <div class="skills-card">
-            <img src="skill2.jpg" alt="Skill 2" class="skills-card-img">
-            <h3 class="skills-card-name">Skill 2</h3>
-        </div>
-        <!-- Add more skills cards as needed -->
-    </section>
 
-    <!-- Projects section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <img src="project1.jpg" alt="Project 1">
-            <h3 class="project-title">Project 1</h3>
-            <p class="project-description">Description of Project 1.</p>
-            <p class="project-tech-stack">Tech Stack: HTML, CSS, JavaScript</p>
-            <a href="github-link-1" class="project-github-link">GitHub Repository</a>
-            <a href="project-link-1" class="project-deployed-link">Deployed Project</a>
-        </div>
-        <div class="project-card">
-            <img src="project2.jpg" alt="Project 2">
-            <h3 class="project-title">Project 2</h3>
-            <p class="project-description">Description of Project 2.</p>
-            <p class="project-tech-stack">Tech Stack: HTML, CSS, JavaScript</p>
-            <a href="github-link-2" class="project-github-link">GitHub Repository</a>
-            <a href="project-link-2" class="project-deployed-link">Deployed Project</a>
-        </div>
-        <!-- Add more project cards as needed -->
-    </section>
+        <ul class="hero-social-list">
 
-    <!-- Contact section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to contact me:</p>
-        <ul>
-            <li id="contact-github"><a href="https://github.com/yourgithub">GitHub Profile</a></li>
-            <li id="contact-linkedin"><a href="https://linkedin.com/in/yourlinkedin">LinkedIn Profile</a></li>
-            <li id="contact-phone">Phone: +1234567890</li>
-            <li id="contact-email">Email: your@email.com</li>
+          <li>
+            <a href="#" class="hero-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+
+              <div class="tooltip skills-card-name">Facebook</div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="hero-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+
+              <div class="tooltip skills-card-name">Twitter</div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="hero-social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+
+              <div class="tooltip skills-card-name">Linkedin</div>
+            </a>
+          </li>
+
         </ul>
-    </section>
 
-    <!-- Resume section -->
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="resume.pdf" id="resume-link-1" target="_blank" rel="noopener noreferrer"><button id="resume-button-1">Download Resume</button></a>
-    </section>
+        <a href="#stats" class="scroll-down">Scroll</a>
 
-    <!-- GitHub stats -->
-    <div class="react-activity-calendar" id="github-streak-stats"></div>
-    <img src="https://github-readme-stats.herokuapp.com/demo/" alt="GitHub streak stats" id="github-streak-stats">
-    <img src="https://github.com/anuraghazra/github-readme-stats" alt="GitHub top languages" id="github-top-langs">
-    <img src="https://github.com/anuraghazra/github-readme-stats" alt="GitHub stats card" id="github-stats-card">
+      </section>
 
-    <script src="script.js"></script>
+
+
+
+
+      <!-- 
+        - #STATS
+      -->
+
+      <section class="stats" id="stats">
+        <ul class="stats-list">
+
+          <li>
+            <a href="#" class="stats-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
+              </div>
+
+              <h2 class="h2 project-title">
+               1000+<strong>Hours of Coding</strong>
+              </h2>
+
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="stats-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/stats-card_icon-2.png" alt="Checkmark icon">
+              </div>
+
+              <h2 class="h2 project-title">
+                4 + <strong>Completed Projects</strong>
+              </h2>
+
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="stats-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/stats-card_icon-3.png" alt="Peoples rating icon">
+              </div>
+
+              <h2 class="h2 project-title">
+                500+<strong>DSA Problems</strong>
+              </h2>
+
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="about section aboutsection" id="about">
+
+        <figure class="about-banner">
+          <img src="./assets/images/in-white-shirt2.png" alt="A man in a alice blue shirt with a thinking expression"
+            class="whiteShirtimage">
+        </figure>
+
+        <div class="about-content section-content">
+
+          <p class="section-subtitle">About me</p>
+
+          <h2 class="h3 project-section-title">Need a Creative Product? I can Help You!</h2>
+
+          <p class="section-text" id="user-detail-intro">
+            <!-- Hi there! I'm AdilRaza, an enthusiastic developer specializing in frontend and backend technologies. My love for crafting
+            clean, user-friendly web applications drives me to turn ideas into reality. With a passion for creative problem-solving,
+            I continuously expand my skill set. Beyond solo full-stack projects, I've collaborated with teams, honing my
+            communication and project management skills. Join me on a journey through my portfolio as a dedicated web developer. -->
+            Passionate Full Stack Web Developer with a robust command of Frontend and Backend technologies. Skilled in the MERN
+            stack and willing to start a career with an organization that provides an opportunity to improve skills and knowledge
+            gained as well as to grow along with the organization's goal.
+          </p>
+
+          <div class="btn-group">
+            <a href="#contact"><button class="btn btn-secondary">Hire me</button></a>
+            <a onclick="downloadResume()" href="./assets/resume/Adil-Raza-Resume.pdf" class="btn btn-primary"
+              id="resume-button-2" download>Download CV</a>
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SKILLS
+      -->
+
+      <section class="skillssection" id="skills">
+
+        <div class="skills-content section-content">
+
+          <p class="section-subtitle">My skills</p>
+
+          <h2 class="h3 project-section-title">What My Programming Skills Include?</h2>
+
+          <p class="section-text">
+            I develop simple, intuitive and responsive user interface that helps users get things done with less effort
+            and time
+            with those technologies.
+          </p>
+
+          <div class="skills-toggle" data-toggle-box>
+            <button class="toggle-btn active" data-toggle-btn>Skills</button>
+
+            <button class="toggle-btn" data-toggle-btn>Tools</button>
+          </div>
+
+        </div>
+
+        <div class="skills-box" data-skills-box>
+
+          <ul class="skills-list">
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">HTML5</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/html5.png" alt="HTML5 logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">CSS3</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/css3.png" alt="CSS3 logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">JavaScript</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/javascript.png" alt="JavaScript logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">TypeScript</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/typescript.png" alt="TypeScript logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+            
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">React</div>
+                
+                <div class="card-icon">
+                  <img src="./assets/images/react.png" alt="React logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+            
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">Chaka UI</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/chakraUI.png" width="50px" alt="Bootstrap logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">Bootstrap</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/bootstrap.png" alt="Vue logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">Firebase</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/firebase.png" alt="Firebase logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">MongoDB</div>
+                <div class="card-icon">
+                  <img src="./assets/images/firebase.png" alt="Firebase logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">Express</div>
+                <div class="card-icon">
+                  <img src="./assets/images/firebase.png" alt="Firebase logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+          <ul class="tools-list">
+
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">Git</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/git.png" alt="Git logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">Npm</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/npm.png" alt="Npm logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">Command Line</div>
+                <div class="card-icon">
+                  <img src="./assets/images/command.png" alt="Command Line logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">VS Code</div>
+                <div class="card-icon">
+                  <img src="./assets/images/vs-code.png" alt="VS Code logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">ClickUp</div>
+                <div class="card-icon">
+                  <img src="./assets/images/clickup.png" alt="ClickUp logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">Slack</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/slack.png" alt="Slack logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="skills-card">
+                <div class="tooltip skills-card-name">Photoshop</div>
+
+                <div class="card-icon">
+                  <img src="./assets/images/photoshop.png" alt="Photoshop logo" class="skills-card-img">
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PROJECTS
+      -->
+
+      <section class="project" id="projects">
+
+        <ul class="project-list">
+
+          <li>
+            <div class="project-content section-content">
+
+              <p class="section-subtitle">My Works</p>
+
+              <h2 class="h3 project-section-title">Checkout my Projects!</h2>
+
+              <p class="section-text">
+                We develop the best quality website that serves for the long-term. Well-documented, clean, easy and
+                elegant interface
+                helps any non-technical clients.
+              </p>
+
+            </div>
+          </li>
+
+<!-- Project 1 -->
+
+          <li>
+            <div class="project-card">
+                <img src="./assets/images/project-screenshots/travelish_big.png" class="w-1001"  alt="">
+
+                <div class="card-content">
+                  <div class="project-name">
+                    <h3 class="h4 project-title">Travelish.com</h3>
+                  </div>
+                  <div class ="project-links">
+                  <a href="https://github.com/mrsaurabhmaske/huge-coast-1878" target=”_blank”><img src="./assets/images/github-link-icon.png" class="project-github-link"/>
+                  </a>
+                  <a href="https://lively-marigold-c98b3e.netlify.app/" target="_blank">
+                    <img src="./assets/images/deployed-link-icon.png" class="project-deployed-link"/>
+                  </a>
+                  </div>
+                </div>
+                <div class="project-description">
+                  <p>Welcome to Travellish, your ultimate travel companion for exploring the world. Travellish is an online travel website
+                  that offers a wide range of travel-related services to make your travel experience hassle-free, fun and memorable.
+                  <br>
+                  Features Travellish offers the following features:  
+                <br>Flight Booking<br>Hotel Booking</p>
+                </div>
+            </div>
+          </li>
+
+<!-- Project 2 -->
+
+
+          <li>
+            <div class="project-card">
+              <img src="./assets/images/EztaxScreenshot.jpg" class="w-1001" alt="">
+          
+              <div class="card-content">
+                <div class="project-name">
+                  <h3 class="h4 project-title">EzTax</h3>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/ankitkrai07/stoic-sack-3017" target=”_blank”><img
+                      src="./assets/images/github-link-icon.png" class="project-github-link"/>
+                  </a>
+                  <a href="https://eztax.vercel.app/" target="_blank">
+                    <img src="./assets/images/deployed-link-icon.png" class="project-deployed-link"/>
+                  </a>
+                </div>
+              </div>
+              <div class="project-description">
+                <p>Ez Tax is your hassle-free solution for tax return submission and calculations. Our user-friendly 
+                  platform is designed to empower individuals and businesses with easy tax management, eliminating 
+                  the need for costly practitioners.</p>
+              </div>
+            </div>
+          </li>
+
+<!-- Project 3 -->
+
+          <li>
+            <div class="project-card">
+              <img src="./assets/images/Artsphere.png" class="w-1001" alt="">
+          
+              <div class="card-content">
+                <div class="project-name">
+                  <h3 class="h4 project-title">Art Sphere.com</h3>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/harshdeepgill/festive-crayon-1023" target=”_blank”><img src="./assets/images/github-link-icon.png" class="project-github-link"/>
+                  </a>
+                  <a href="https://festive-crayon-1023-one.vercel.app/" target="_blank">
+                    <img src="./assets/images/deployed-link-icon.png" class="project-deployed-link"/>
+                  </a>
+                </div>
+              </div>
+              <div class="project-description">
+                <p>This is a React website built on theme of Art gallery it consists basic functionality such as post art, comment on art,
+                   view arts by category, etc more focus is on UI the project contains Home page, Arts page, Upload Page, Edit Art Page,
+                    Register Page and Login Page.</p>
+              </div>
+            </div>
+          </li>
+
+<!-- Project 4 -->
+
+          <li>
+            <div class="project-card">
+              <img src="./assets/images/TripWiz.png" class="w-1001" alt="">
+          
+              <div class="card-content">
+                <div class="project-name">
+                  <h3 class="h4 project-title">TripWiz.com</h3>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/adilrza0/adaptable-oven-8035" target=”_blank”><img src="./assets/images/github-link-icon.png" class="project-github-link"/>
+                  </a>
+                  <a href="https://adaptable-oven-8035.vercel.app/" target="_blank">
+                    <img src="./assets/images/deployed-link-icon.png" class="project-deployed-link"/>
+                  </a>
+                </div>
+              </div>
+              <div class="project-description">
+                <p>Welcome to Trip Wiz! Trip Wiz is your ultimate travel companion, designed to help you plan, organize, and 
+                  make the most out of your trips. Whether you're a frequent globetrotter or just planning your next weekend getaway,
+                   Trip Wiz has got you covered.</p>
+              </div>
+            </div>
+          </li>
+
+<!-- Project 5 -->
+
+          <!-- <li>
+            <div class="project-card">
+              <img src="./assets/images/project-screenshots/Paaltoo.png" class="w-1001" alt="">
+          
+              <div class="card-content">
+                <div class="project-name">
+                  <h3 class="h4 project-title">Paaltoo.com</h3>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/CODEwithSANKETj/vivid-roll-405" target=”_blank”><img src="./assets/images/github-link-icon.png" class="project-github-link"/>
+                  </a>
+                  <a href="https://vivid-roll-405.vercel.app/" target="_blank">
+                    <img src="./assets/images/deployed-link-icon.png" class="project-deployed-link"/>
+                  </a>
+                </div>
+              </div>
+              <div class="project-description">
+                <p>Welcome to PAALTOO, where pet owners discover a world of unparalleled care and support for their beloved furry friends. Our intuitive PetCare platform has been thoughtfully crafted to ensure that looking after your pets is not just a responsibility, but a joyous experience.</p>
+              </div>
+            </div>
+          </li> -->
+
+<!-- Project 6 -->
+
+          <li>
+            <div class="project-card">
+              <img src="./assets/images/project-screenshots/workinprogress.gif" class="w-1001" alt="">
+          
+              <div class="card-content">
+                <div class="project-name">
+                  <h3 class="h4 project-title">New Project Coming soon...</h3>
+                </div>
+                <div class="project-links">
+                  <a><img
+                      src="./assets/images/github-link-icon.png" class="project-github-link"/>
+                  </a>
+                  <a>
+                    <img src="./assets/images/deployed-link-icon.png" class="project-deployed-link"/>
+                  </a>
+                </div>
+              </div>
+              <div class="project-description">
+                <p>Thank you for your Patience...</p>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </section>
+
+<!-- GITHUB STATS -->
+<h2 class="section-title" id="github-title">GitHub Stats</h2>
+<div class="github">
+  <div>
+    <div class="container">
+      <a class="react-activity-calendar" href="https://git.io/streak-stats">
+        <img id="github-streak-stats"
+          src="https://github-readme-streak-stats.herokuapp.com/?user=mrAdilRaza&theme=swift"
+          alt="GitHub Streak Stats" />
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="container">
+      <a class="react-activity-calendar" href="https://github.com/mrAdilRaza/github-readme-stats">
+        <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=mrAdilRaza"
+          alt="GitHub Stats Card" />
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="container">
+      <a class="react-activity-calendar" href="https://github.com/mrAdilRaza/github-readme-stats">
+        <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mrAdilRaza"
+          alt="GitHub Top Langs" />
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- ------------------------------------------- -->
+
+      <!-- 
+        - #CONTACT
+      -->
+
+      <section class="contactSection contact section" id="contact">
+
+        <div class="contact-content section-content">
+
+          <p class="section-subtitle">Contact</p>
+
+          <h2 class="h3 project-section-title">Have a new Project Idea? Please Drop a Message</h2>
+
+          <p class="section-text">
+            Get in touch and let me know how I can help. Fill out the form and I will be in touch as soon as possible.
+          </p>
+
+          <ul class="contact-list">
+
+            <li class="contact-list-item">
+
+              <div class="contact-item-icon">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Address:</h3>
+
+                <address class="contact-info">
+                  New Delhi, India
+                </address>
+              </div>
+
+            </li>
+
+            <li class="contact-list-item">
+
+              <div class="contact-item-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Phone:</h3>
+
+                <a href="tel:01234567789" class="contact-info" id="contact-phone">(+91) 9354684435</a>
+
+              </div>
+
+            </li>
+
+            <li class="contact-list-item">
+
+              <div class="contact-item-icon">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Email:</h3>
+
+                <a href="mailto:Adil.r.Raza@gmail.com" class="contact-info" id="contact-email">adilrza0@gmail.com</a>
+
+              </div>
+
+            </li>
+
+            <li>
+              <ul class="contac-social-list">
+
+                <li>
+                  <a href="#" class="contact-social-link">
+                    <div class="tooltip">Facebook</div>
+
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.twitter.com/" target="_blank" class="contact-social-link">
+                    <div class="tooltip">Twitter</div>
+
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.linkedin.com/in/Adil-Raza" target="_blank" class="contact-social-link" id="contact-linkedin">
+                    <div class="tooltip">Linkedin</div>
+
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://github.com/adilrza0" target="_blank" class="contact-social-link" id="contact-github">
+                    <div class="tooltip">Github</div>
+
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <form action="" class="contact-form">
+
+          <div class="form-wrapper">
+
+            <label for="name" class="form-label">Name</label>
+
+            <div class="input-wrapper">
+
+              <input type="text" name="name" id="name" required placeholder="e.g AdilRaza" class="input-field">
+
+              <ion-icon name="person-circle"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="email" class="form-label">Email</label>
+
+            <div class="input-wrapper">
+
+              <input type="email" name="email" id="email" required placeholder="e.g Adil@gmail.com"
+                class="input-field">
+
+              <ion-icon name="mail"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="phone" class="form-label">Phone</label>
+
+            <div class="input-wrapper">
+
+              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
+
+              <ion-icon name="call"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="message" class="form-label">Message</label>
+
+            <div class="input-wrapper">
+
+              <textarea name="message" id="message" required placeholder="Write message..."
+                class="input-field"></textarea>
+
+              <ion-icon name="chatbubbles"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send</button>
+
+        </form>
+
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <p class="h1 logo">
+        <a href="#">
+         Adil Raza<span>.</span>
+        </a>
+      </p>
+
+      <p class="copyright">
+        <a>Made with lots of ❤️</a>
+      </p>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top title="Go to Top">
+    <ion-icon name="arrow-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
