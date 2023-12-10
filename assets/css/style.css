@@ -79,7 +79,7 @@ body.light_theme {
 
   --bg-primary: hsl(0, 0%, 100%);
   --bg-secondary: hsl(0, 0%, 100%);
-  --color-primary: hsl(0, 1%, 27%);
+  --color-primary: hsl(0, 0%, 13%);
   --color-secondary: hsl(0, 1%, 38%);
   --card-shadow: hsla(0, 0%, 0%, 0.1);
   --input-bg: hsl(0, 0%, 93%);
@@ -187,9 +187,10 @@ body.active { overflow: hidden; }
 .h4 { font-size: var(--fs-5); }
 
 .w-100 {
-  width: 80%;
+  width: 100%;
+  
  border-radius: 5%;
-  filter: drop-shadow(5px -2px 30px var(--color-primary));
+  /* filter: drop-shadow(5px -2px 30px var(--color-primary)); */
   /* padding: 50%; */
  }
 
@@ -463,16 +464,18 @@ main { overflow-x: hidden; }
 .hero {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
+ 
+  justify-content: left;
+  align-items:end;
   padding-top: 115px;
   margin-bottom: var(--section-padding);
 }
 
 .hero-banner {
-  max-width: 500px;
-  width: 125%;
+ 
+  
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -481,7 +484,8 @@ main { overflow-x: hidden; }
 .hero-content { max-width: 450px; }
 
 .hero-title {
-  text-align: center;
+  color:var(--color-secondary);
+  text-align: left;
   margin-bottom: 20px;
 }
 
@@ -657,6 +661,9 @@ main { overflow-x: hidden; }
   box-shadow: var(--shadow-1);
   cursor: help;
 }
+.skills-card-img{
+  width: 60px;
+}
 
 .skills-card:hover .tooltip {
   transform: translateY(0);
@@ -725,6 +732,34 @@ border-radius: 5px;
   color: var(--color-secondary);
 }
 
+/*--------- tech Stack ----------- */
+.stack-container{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap:10px;
+  margin: 10px;
+ 
+}
+.stack-card{
+  position: relative;
+  background: var(--white);
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-12);
+  box-shadow: var(--color-secondary);
+  cursor: help;
+
+}
+.stack-card-img{
+  width: 40px;
+}
+
+.stack-card:hover .tooltip {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 
 
@@ -1131,7 +1166,7 @@ textarea.input-field {
 
     position: absolute;
     top: 58%;
-    filter: drop-shadow(2px 4px 10px var(--black));
+    /* filter: drop-shadow(2px 4px 10px var(--black)); */
   }
 
   .hero .btn-primary:is(:hover, :focus) { color: hsl(0, 0%, 12%); }
